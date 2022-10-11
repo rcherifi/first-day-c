@@ -1,5 +1,5 @@
 pipeline {
- 
+    agent any
     stages {
         stage("Build") {
             steps {
@@ -10,10 +10,10 @@ pipeline {
             }
         }
 
-    stage("execute") {
-        steps {
-         sh "./helloworld"
+        stage("execute") {
+            steps {
+                sh "./helloworld"
+            }
         }
     }
-  }
 }
