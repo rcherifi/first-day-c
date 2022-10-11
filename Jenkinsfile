@@ -2,7 +2,8 @@ pipeline {
     agent {
         node {
             label 'C'
-        }    
+        }
+    }    
     stages {
         stage("Build") {
             steps {
@@ -19,4 +20,3 @@ pipeline {
         }
     }
   }
-}
