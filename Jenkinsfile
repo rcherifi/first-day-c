@@ -7,6 +7,8 @@ pipeline {
                 sh "apt install build-essential -y"
                 sh "apt-get install manpages-dev -y"
                 sh "gcc -o helloworld HelloWorld.c"
+
+                archiveArtifacts artifacts: '*', fingerprint: true
             }
         }
 
