@@ -2,16 +2,16 @@ pipeline {
   stages {
     stage("Build") {
        steps {
-        apt update -y
-        apt install build-essential -y
-        apt-get install manpages-dev -y
-        gcc -o helloworld HelloWorld.c
+        sh "apt update -y"
+        sh "apt install build-essential -y"
+        sh "apt-get install manpages-dev -y"
+        sh "gcc -o helloworld HelloWorld.c"
        }
     }
 
     stage("execute") {
         steps {
-         ./helloworld
+         sh "./helloworld"
         }
     }
   }
